@@ -7,7 +7,13 @@ spec:
   template:
     spec:
       containers:
-        - image: gcr.io/knative-samples/knative-route-demo:blue # The URL to the sample app docker image
+        - image: gcr.io/knative-samples/knative-route-demo:green # The URL to the sample app docker image
           env:
             - name: T_VERSION
-              value: "blue"
+              value: "green"
+  traffic:
+  - percent: 100
+    revisionName: blue-green-01-x9zmf
+  - tag: v2
+    latestRevision: true
+    percent: 0
