@@ -12,8 +12,8 @@ spec:
             - name: T_VERSION
               value: "green"
   traffic:
-  - percent: 50
+  - percent: 0
     revisionName: blue-green-01-x9zmf
   - tag: v2
     latestRevision: true
-    percent: 50
+    percent: 100
